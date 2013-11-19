@@ -23,7 +23,7 @@
 
             <div id="content">
                 <?php
-                include('getPost.php');
+                include('getPostDetail.php');
                 ?>
             </div>
 

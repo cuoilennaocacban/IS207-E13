@@ -22,9 +22,14 @@
             </div>
 
             <div id="content">
-                <?php
-                include('getPost.php');
-                ?>
+                <form method="post" action="addPostTemp.php">
+                    <br></br>
+                    Tiêu đề: <input type="text" name="title"></input><br></br>
+                    Hình đại diện: <input type="text" name="pic"></input><br></br>
+                    Xem trước: <input type="text" name="preview"></input><br></br>
+                    <textarea name="input"></textarea><br></br>
+                    <input type="submit" value="Gửi bài viết"/><br></br>
+                </form>
             </div>
 
             <div id="footer">

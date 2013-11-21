@@ -25,6 +25,16 @@
                 <form method="post" action="addPostTemp.php">
                     <br></br>
                     Tiêu đề: <input type="text" name="title"></input><br></br>
+                    Chuyên mục: <select name="catSelect">
+                        <?php
+                        include 'includes/dbconnect.php';
+                        if ($result = mysqli_query($mysqli, "SELECT * FROM cat")) {
+                            while ($row = mysqli_fetch_row($result)) {
+                                echo "<option value='$row[0]'>$row[1]</option>";
+                            }
+                        }
+                        ?>
+                    </select><br></br>
                     Hình đại diện: <input type="text" name="pic"></input><br></br>
                     Xem trước: <input type="text" name="preview"></input><br></br>
                     <textarea name="input"></textarea><br></br>

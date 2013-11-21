@@ -1,0 +1,64 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $("#select").click(function() {
+                    value = $("#select").val();
+                    addTable(value);
+                });
+            });
+        </script>
+
+        <script>
+            function addTable(value)
+            {
+                var divElement = document.getElementById("tableDiv");
+
+
+                var tableElement = "<table border='1'>"
+
+                for (var i = 0; i < 10; i++)
+                {
+                    tableElement += "<tr>";
+                    tableElement += "<td>" + value + " x " + i + "</td>";
+                    tableElement += "<td>" + value*i + "</td>";
+                    tableElement += "</tr>";
+                }
+
+                tableElement += "</table>";
+
+                divElement.innerHTML = tableElement;
+            }
+
+        </script>
+
+    </head>
+    <body>
+        
+        <select id="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <div id="tableDiv">
+
+        </div>
+
+    </body>
+</html>

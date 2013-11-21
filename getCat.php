@@ -1,5 +1,4 @@
 <?php
-
 include('includes/dbconnect.php');
 
 function generateNews($id, $title, $preview, $pic, $detail, $postDate) {
@@ -21,7 +20,9 @@ function generateNews($id, $title, $preview, $pic, $detail, $postDate) {
     echo "</div>";
 }
 
-$queryString = "SELECT * FROM newsdetails";
+$id = $_SERVER['QUERY_STRING'];
+list($temp, $tempId) = split("=", $id);
+$queryString = "SELECT * FROM newsdetails WHERE cat='" . $tempId . "'";
 
 if ($result = mysqli_query($mysqli, $queryString)) {
     echo "<br>";

@@ -5,6 +5,7 @@
 
 body{
     background: #e5e5e5;
+    font-family: Arial;
 }
 
 #main{
@@ -17,7 +18,8 @@ body{
 }
 
 #header {
-    background-color: #FFA500;
+    background-color: rgba(255, 165, 0, 0.71);
+    width: 1366px;
 }
 
 #left{
@@ -30,9 +32,9 @@ body{
 }
 
 #content{
-	background-color: #EEEEEE;
-	width: 1000px;
-	float: right;
+    background-color: #EEEEEE;
+    width: 1000px;
+    float: right;
 }
 
 .clr{
@@ -58,4 +60,59 @@ body{
 
 td{
     vertical-align: top;
+}
+
+#post h2 a:hover{
+    color: #c00;
+}
+
+#post h2 a{
+    text-decoration: none;
+    color: #000;
+}
+
+#post h2 a:visited{
+    color: #c00;
+}
+
+#nav{
+    
+}
+
+.clearfix{
+    clear: both;
+    zoom: 1;
+}
+
+.catItem{
+    list-style: none;
+    float: left;
+    font-size: 17px;
+    color: white;
+    line-height: 47px;
+    padding: 0 22px 0 15px;
+    background-color: #303;
+}
+
+.catItem:hover
+{
+    list-style: none;
+    float: left;
+    font-size: 17px;
+    color: white;
+    line-height: 47px;
+    padding: 0 22px 0 15px;
+    background-color: #FF0;
+}
+
+.catItem a {
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.catItem a:hover {
+    font-size: 18px;
+    color: #303;
+    text-decoration: none;
 }

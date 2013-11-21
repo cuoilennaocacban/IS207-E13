@@ -24,7 +24,7 @@
             <div id="content">
                 <?php
                 include('includes/nav.php');
-                include('getPost.php');
+                include('getCat.php');
                 ?>
             </div>
 

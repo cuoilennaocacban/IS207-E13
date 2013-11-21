@@ -1,0 +1,63 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    row = $('#row').val();
+                    col = $('#col').val();
+                    addTable(row, col);
+                });
+            });
+        </script>
+
+        <script>
+            function addTable(row, col)
+            {
+                var divElement = document.getElementById("tableDiv");
+                
+                
+                var tableElement = "<table border='1'>"
+                
+                for(var i=0;i<row;i++)
+                    {
+                        tableElement += "<tr>";
+                        for(var j=0;j<col;j++)
+                            {
+                                tableElement += "<td>data cell</td>";
+                            }
+                        tableElement += "</tr>";
+                    }
+                    
+               tableElement += "</table>";
+               
+               divElement.innerHTML = "<p>Row: " + row + "</p>"
+                        + "<p>Col: " + col + "</p>"
+                        + tableElement;
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <form>
+            Số dòng: <input type="number" name="row" id="row"><br>
+            Số cột: <input type="number" name="col" id="col"><br>
+        </form>
+
+        <button type="button">GET BUTTON</button>
+
+        <div id="tableDiv">
+
+        </div>
+
+    </body>
+</html>

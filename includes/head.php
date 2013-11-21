@@ -11,7 +11,7 @@
         tinymce.init({
             selector: "textarea",
             theme: "modern",
-			entity_encoding : "raw",
+            entity_encoding: "raw",
             plugins: [
                 "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
@@ -28,6 +28,20 @@
                 {title: 'Table styles'},
                 {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
             ]
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            var div = $('#header');
+            var start = $(div).offset().top;
+
+            $.event.add(window, "scroll", function() {
+                var p = $(window).scrollTop();
+                $(div).css('position', ((p) > start) ? 'fixed' : 'static');
+                $(div).css('top', ((p) > start) ? '0px' : '');
+            });
+
         });
     </script>
 

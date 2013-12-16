@@ -15,6 +15,8 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_row($result);
     if ($password == $row[2]) {
         echo "<p>Xin chào " . $row[1] . "</p>";
+//        echo $row[1];
+//        echo $row[3];
         setcookie("user", $row[1], time() + 3600);
         setcookie("pre", $row[3], time() + 3600);
         header("Location: http://localhost/Projects/index.php");

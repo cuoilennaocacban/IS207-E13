@@ -7,7 +7,23 @@
         $user = $_COOKIE["user"];
         $pre = $_COOKIE["pre"];
 
-        if ($pre == 0 || $pre == 1 || $pre == 2) {
+//        echo $pre;
+//        echo $user;
+
+        if ($pre == 0) {
+            ?>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="addpost.php">Add Post</a></li>
+            <li><a href="approvePosts.php">Approve Post</a></li>
+            <?php
+        } else if ($pre == 2) {
+            ?>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="approvePosts.php">Approve Post</a></li>
+            <?php
+        } else if ($pre == 1) {
             ?>
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About Us</a></li>
@@ -17,10 +33,10 @@
             ?>
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About Us</a></li>
-            <?php
-        }
-    } else {
-        ?>
+        <?php
+    }
+} else {
+    ?>
         <li><a href="index.php">Home</a></li>
         <li><a href="about.php">About Us</a></li>
     <?php

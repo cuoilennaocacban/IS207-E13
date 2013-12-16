@@ -22,7 +22,7 @@ function generateNews($id, $title, $preview, $pic, $detail, $postDate) {
 
 $id = $_SERVER['QUERY_STRING'];
 list($temp, $tempId) = split("=", $id);
-$queryString = "SELECT * FROM newsdetails WHERE cat='" . $tempId . "'";
+$queryString = "SELECT * FROM newsdetails WHERE cat='" . $tempId . "' and approved='1'";
 
 if ($result = mysqli_query($mysqli, $queryString)) {
     echo "<br>";

@@ -12,16 +12,17 @@ function generateNews($id, $title, $preview, $pic, $detail, $postDate) {
     echo "</a>", "</div></td>";
 
     echo "<td>";
-    echo "<h2><a href='/Projects/post.php?id=",$id,"' title='", $title, "'>", $title, "</a></h2>";
+    echo "<h2><a href='/Projects/post.php?id=", $id, "' title='", $title, "'>", $title, "</a></h2>";
 
     echo "<div id='postDate'><p>Đăng lúc: ", $postDate, "</p></div>";
     echo "<div id='preview'><p>", $preview, "</p><div>";
     echo "</td>";
+    echo "<td><form action='approveAction.php' method='post'><button type='submit' name='but' value='$id'>Approve this Post</button></form></td>";
     echo "</tr></table>";
     echo "</div>";
 }
 
-$queryString = "SELECT * FROM newsdetails WHERE approved='1'";
+$queryString = "SELECT * FROM newsdetails WHERE approved='0'";
 
 if ($result = mysqli_query($mysqli, $queryString)) {
     echo "<br>";

@@ -11,7 +11,7 @@ $cat = $_POST['catSelect'];
 //echo $html_content;
 //echo $title;
 
-$queryString = "INSERT INTO `news`.`newsdetails` (`title`,`cat`, `preview`, `picture`, `details`, `postdate`, `isTop`,`approved`) 
+$queryString = "INSERT INTO `news`.`newsdetails` (`title`,`catId`, `preview`, `picture`, `details`, `postdate`, `isTop`,`approved`) 
     VALUES ('$title','$cat','$preview','$pic', '$html_content', NOW(), b'0', b'0');";
 
 //echo $queryString;

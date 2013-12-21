@@ -16,6 +16,7 @@
             <li><a href="about.php">About Us</a></li>
             <li><a href="addpost.php">Add Post</a></li>
             <li><a href="approvePosts.php">Approve Post</a></li>
+            <li><a href="addCat.php">Manage Category</a></li>
             <?php
         } else if ($pre == 2) {
             ?>

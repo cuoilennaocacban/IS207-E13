@@ -31,7 +31,7 @@ if ($result = mysqli_query($mysqli, $queryString)) {
     echo "<div>";
 
     while ($row = mysqli_fetch_row($result)) {
-        generateNews($row[2], $row[3], $row[4], $row[5], $row[6]);
+        generateNews($row[3], $row[4], $row[5], $row[6], $row[7]);
         //echo $row[2];
     }
 

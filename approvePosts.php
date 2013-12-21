@@ -5,6 +5,8 @@
     <?php
     include('includes/head.php');
     ?>
+    
+    <?php include_once('analyticstracking.php') ?>
 
     <body>
         <div id="container">
